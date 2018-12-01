@@ -1,4 +1,4 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/usr/local/bin/python3"
+    "python.pythonPath": "/home/nomad/anaconda3/bin/python"
 }

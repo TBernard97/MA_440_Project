@@ -17,10 +17,12 @@ expenses_MIN = expenses.min()
 print("[STAT] TUITION MEAN : {} TUITION MAX : {} TUITION MIN : {}".format(tuition_AVG, tuition_MAX, tuition_MIN))
 print("[STAT] EXPENSES MEAN : {} EXPENSES MAX : {} EXPENSES MIN : {}".format(expenses_AVG, expenses_MAX, expenses_MIN))
 
-expenses_bins = pd.cut(expenses, 5)
-expenses_groups = expenses.groupby(expenses_bins).agg(['count', 'sum'])
-print(expenses_groups)
+labels = ['low', 'medium', 'high', 'very high']
+bins = [-30859103.721,  6195393823.2, 12390670367.4,18585946911.6, 24781223455.8 ]
 
-tuition_bins = pd.cut(tuition , 5)
-tuition_groups = tuition.groupby(tuition_bins).agg(['count', 'sum'])
-print(tuition_groups)
+data['expenses_bins'] = pd.cut(expenses, bins, labels=labels)
+
+
+#tuition_bins = pd.cut(tuition , 5, labels=labels)
+
+print(data)
