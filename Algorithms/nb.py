@@ -23,7 +23,7 @@ targets = df['Salaries_bin'].values
 
 classifier.fit(counts, targets)
 
-df.to_csv('../Data/For-Profit-C1_Binned.csv')
+
 
 
 
