@@ -26,7 +26,7 @@ for college in unilist:
      if name.str.contains(college).any():
          id_list.append(name['id'])
 
-with open('../Data/{}'.format(output_file), mode='a+') as output:
+with open('{}'.format(output_file), mode='a+') as output:
     comparison_frame.head(0).to_csv(output)
     for id in id_list:
         for index, row in comparison_frame.iterrows():
